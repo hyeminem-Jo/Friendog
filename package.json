@@ -1,0 +1,24 @@
+{
+  "name": "tomorrow-house",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass -wr styles/main.scss ./style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyeminem-Jo/tomorrow-house.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hyeminem-Jo/tomorrow-house/issues"
+  },
+  "homepage": "https://github.com/hyeminem-Jo/tomorrow-house#readme",
+  "devDependencies": {
+    "sass": "^1.49.9"
+  }
+}
