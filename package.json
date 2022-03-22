@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass -wr styles/main.scss ./style.css"
+    "sass": "sass --watch styles/main.scss ./style.css"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,10 @@
   },
   "homepage": "https://github.com/hyeminem-Jo/tomorrow-house#readme",
   "devDependencies": {
-    "sass": "^1.49.9"
+    "sass": "^1.49.9",
+    "stylelint": "^14.6.0",
+    "stylelint-config-recess-order": "^3.0.0",
+    "stylelint-config-standard": "^25.0.0",
+    "stylelint-scss": "^4.2.0"
   }
 }
