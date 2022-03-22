@@ -1,0 +1,29 @@
+@mixin responsive($screen) {
+  @if ($screen == 'T') {
+    // Tablet
+    @media screen and (min-width: $md-breakpoint) {
+      @content;
+    }
+  }
+  @if ($screen == 'D') {
+    // Desktop
+    @media screen and (min-width: $lg-breakpoint) {
+      @content;
+    }
+  }
+}
+
+// .section {
+//   @include responsive(T) {
+//     font-size: 10px; // 해당 내용들이 전부 @content 안으로 들어감
+//     color: red;
+
+//     .ic-close {
+//       font-size: 20px;
+//     }
+//   }
+//   @include responsive(T) {
+//     font-size: 10px;
+//     color: blue;
+//   }
+// }
