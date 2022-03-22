@@ -1,16 +1,23 @@
+// 커스텀 reset css
+
 * {
   margin: 0;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: $font-main;
   // 가끔 폰트가 안먹히는 경우가 있어서 font-family 를 html, body 에 또 먹여준다.
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // font 가 더 부드럽게 render 됨
 }
 
 html {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: $font-main;
+  font-size: $font-size-16; // 브라우저의 기본 폰트 크기를 바꿀 수 있다.
 }
 
 body {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: $font-main;
+  color: $primary; // 본문의 기본 text 컬러를 미리 지정해주어 일괄적으로 처리
 }
 
 h1 {

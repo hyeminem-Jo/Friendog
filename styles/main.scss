@@ -1,21 +1,6 @@
 @import './constants/colors'; // 변수 선언과 관련된 것은 최상위에 import
+@import './constants/typography';
+
 @import './base/fonts'; // 파일 이름은 _fonts/scss 이지만 이렇게 적어도됨
 @import './base/normalize';
 @import './base/reset';
-
-$black: #000;
-$dark: #191a20; // primary 보다 중요 (가격같은 중요한 부분의 text 컬러)
-$primary: #3f4150; // primary (본문에 대부분 사용되는 text 컬러)
-$secondary: #8c8d96; // primary 보다 덜 중요 (세일 전 가격 등 text 컬러)
-$tertiary: #b2b3b9;
-
-$border: #e0e2e7; // 보통 backround 보다 진한 색이면 border 로 많이 사용됨
-$background: #f7f8fa; // 흰색 다음으로 연한 색은 대부분 미색용 background 로 사용됨
-$white: #fff;
-
-$blue: #3da5f5;
-$blue-dark: #3186c4;
-$blue-light: #ecf6fe;
-
-$red: #f86d7d;
-$green: #22c58b;
