@@ -1,0 +1,31 @@
+// placeholder, mixin: 반복되는 코드를 사용하지 않게 해줌
+// 공통 스타일을 선언할 때 sass 에서 제공하는 placeholder(%) 를 사용
+// * mixin 과 같이 반복되어 사용되거나 확장성은 없음
+// * 비슷한 스타일을 가진 요소들에게 상속하는 방식
+// * mixin 은 요소에 그냥 다 각각 때려박는 반면, placeholder(%)는 연관있는 요소들을 알아서 그룹핑하여 한꺼번에 스타일을 넣어준다.
+%tag-base {
+  @include inline-flexbox; // 태그라서 수평 정렬, 안의 텍스트 가운데 정렬
+  @include text-style(12);
+  height: 20px;
+  padding: 0 6px;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+.tag-red {
+  @extend %tag-base;
+  color: $white;
+  background-color: $red;
+}
+
+.tag-green {
+  @extend %tag-base;
+  color: $white;
+  background-color: $green;
+}
+
+.tag-gray {
+  @extend %tag-base;
+  color: $secondary;
+  background-color: $border;
+}
