@@ -1,0 +1,77 @@
+%form-base {
+  @include text-style(16, $primary);
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 0 8px;
+  background-color: $white;
+  border: 1px solid $border;
+  border-radius: 4px;
+  appearance: none;
+  transition: background-color 0.2s ease-in-out;
+
+  &::placeholder {
+    color: $tertiary;
+  }
+
+  &:not(.disabled):hover {
+    background-color: $background;
+  }
+
+  &.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+
+.form-select,
+.form-input {
+  @extend %form-base;
+}
+
+// select
+.select-group {
+  position: relative;
+
+  &.is-active {
+    .form-select {
+      border-color: $blue;
+    }
+
+    .ic-caret {
+      color: $blue;
+    }
+  }
+
+  .form-select {
+    padding-right: 40px;
+    // 텍스트 넘침 방지 ...
+    text-overflow: ellipsis;
+  }
+
+  .ic-caret {
+    @include pos-center-y;
+    right: 8px;
+    font-size: 24px;
+    color: $tertiary;
+    pointer-events: none;
+    // absolute 속성 때문에 상위에 위치해버려 클릭을 막아버리는 것을 방지하기 위해 caret 아이콘에 대한 click 이벤트 자체를 없애준다.
+  }
+}
+
+// input
+.input-group {
+  position: relative;
+
+  .form-input {
+    padding-left: 40px;
+  }
+
+  .ic-search {
+    @include pos-center-y;
+    font-size: 20px;
+    color: $secondary;
+    left: 10px;
+    pointer-events: none;
+  }
+}
