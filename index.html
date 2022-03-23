@@ -134,7 +134,7 @@
       </div>
 
       <div>
-        <div class="select-group is-active" style="width: 50%">
+        <div class="select-group is-active">
           <select class="form-select">
             <!-- option[value="$"]*5{선택사항 $} -->
             <option value="1">선택사항 1</option>
@@ -146,9 +146,27 @@
           <!-- 안중요하므로 aria-hidden 때리기 -->
           <i class="ic-caret" aria-hidden></i>
         </div>
-        <div class="input-group" style="width: 50%">
+        <div class="input-group">
           <i class="ic-search" aria-hidden></i>
           <input class="form-input" type="text" placeholder="스토어 검색" />
+        </div>
+      </div>
+
+      <div>
+        <div class="pagination">
+          <button class="page-control page-prev" type="button">
+            <i class="ic-chevron"></i>
+          </button>
+          <ol class="page-list">
+            <li class="page-item"><a href="/">1</a></li>
+            <li class="page-item"><a href="/">2</a></li>
+            <li class="page-item"><a href="/">3</a></li>
+            <li class="page-item"><a href="/">4</a></li>
+            <li class="page-item is-active"><a href="/">999</a></li>
+          </ol>
+          <button class="page-control page-next" type="button">
+            <i class="ic-chevron"></i>
+          </button>
         </div>
       </div>
     </div>
