@@ -1,0 +1,77 @@
+%price-base {
+  @include inline-flexbox(start); // 부모 수평 정렬, 안의 자식요소 가운데 정렬
+
+  .amount {
+    font-family: $font-price;
+  }
+
+  .currency {
+    font-family: $font-main;
+  }
+}
+
+.price-16,
+.price-20,
+.price-32 {
+  @extend %price-base;
+  color: $dark;
+
+  .amount {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .currency {
+    font-weight: 700;
+  }
+}
+
+.price-16 {
+  .amount {
+    font-size: 16px; // family 가 $font-price 이기 때문
+  }
+
+  .currency {
+    @include text-style(14); // family 가 $font-main 이기 때문
+  }
+}
+
+.price-20 {
+  .amount {
+    font-size: 20px; // family 가 $font-price 이기 때문
+  }
+
+  .currency {
+    @include text-style(16); // family 가 $font-main 이기 때문
+  }
+}
+
+.price-32 {
+  .amount {
+    font-size: 32px; // family 가 $font-price 이기 때문
+  }
+
+  .currency {
+    font-size: 28px; // 예외의 경우 한번 쯤
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+  }
+}
+
+.price-off {
+  @extend %price-base;
+  color: $secondary;
+
+  .amount {
+    font-size: 14px; // $font-price
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    text-decoration: line-through;
+  }
+
+  .currency {
+    @include text-style(14); // $font-main
+    font-weight: 400;
+  }
+}
