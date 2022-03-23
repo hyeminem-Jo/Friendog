@@ -5,6 +5,7 @@
 @import './base/fonts'; // 파일 이름은 _fonts/scss 이지만 이렇게 적어도됨
 @import './base/normalize';
 @import './base/reset';
+@import './base/globals';
 
 @import './mixins/text-style';
 @import './mixins/responsive';
