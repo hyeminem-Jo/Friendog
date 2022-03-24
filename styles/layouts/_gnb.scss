@@ -11,6 +11,7 @@
   }
 
   &-right {
+
     .button-group {
       @include flexbox(end);
     }
@@ -43,6 +44,58 @@
       display: block;
       width: auto;
       height: 20px;
+    }
+  }
+
+  // 태블릿 768px ~
+  @include responsive(T) {
+    &-left {
+      @include flexbox(start);
+    }
+
+    &-right {
+      @include flexbox(end);
+
+      .button-group {
+        margin-right: 24px;
+
+        .gnb-icon-button {
+          margin-right: 8px;
+        }
+      }
+    }
+
+    &-wrapper {
+      height: 80px;
+    }
+
+    .logo {
+      margin-right: 32px;
+      position: static;
+      // position 을 static 으로 해제할 때 top, left 등의 효과는 자동으로 사라짐
+      transform: none;
+
+      img {
+        height: 24px;
+      }
+    }
+
+    .btn-primary {
+      width: 88px;
+
+      i {
+        margin-left: 4px;
+      }
+    }
+  }
+
+  // PC 1200px ~
+  @include responsive(D) {
+    &-right {
+      .input-group {
+        width: 264px;
+        margin-right: 24px;
+      }
     }
   }
 }

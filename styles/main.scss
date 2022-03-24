@@ -21,5 +21,8 @@
 @import './modules/pagination';
 @import './modules/icons';
 
+// 단위 크기: module < component < layout
+@import './components/gnb-nav';
+
 @import './layouts/grids';
 @import './layouts/gnb';
