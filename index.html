@@ -30,60 +30,62 @@
       <div class="row">
         <!-- 해당 레이아웃은 굳이 모바일, 태블릿, PC 전부 컬럼이 나뉘지 않아도 되고 다 너비 100% 차지하기 때문에 굳이 class="col-sm-4 col-md-12 col-lg-12" 를 다 쓰기보단 col-sm-4 하나만 선언해도 100% 가 유지됨-->
         <div class="col-sm-4">
-          <div class="gnb-left">
-            <h1 class="logo">
-              <a href="/">
-                <img src="./assets/images/logo.svg" alt="내일의 집" />
-              </a>
-            </h1>
-            <!-- nav 같은 sectioning 엘리먼트에는 반드시 이 엘리먼트가 무엇을 하는지에 대한 정보를 기입할 title heading 태그가 필요하다. -->
-            <!-- nav 는 모바일에서만 안보이고, 태블릿과 PC 에서는 보임-->
-            <nav class="gnb-nav sm-hidden">
-              <!-- 웹표준을 위해 반드시 적어줘야 하지만 디자인상으로는 존재 x -->
-              <h2 class="visually-hidden">메뉴</h2>
-              <ul class="gnb-nav-list">
-                <li class="gnb-nav-item"><a href="/">커뮤니티</a></li>
-                <li class="gnb-nav-item"><a href="/">스토어</a></li>
-                <li class="gnb-nav-item"><a href="/">인테리어시공</a></li>
-              </ul>
-            </nav>
-            <!-- aria: 시각장애인이 무슨 용도인지 스크린 리더에 읽혀야됨 -->
-            <!-- 메뉴 열기(햄버거 버튼): 모바일에서만 보임 -->
-            <button class="gnb-icon-button sm-only" type="button" aria-label="메뉴 열기 버튼">
-              <i class="ic-menu"></i>
-            </button>
-          </div>
-
-          <div class="gnb-right">
-            <div class="input-group lg-only">
-              <i class="ic-search" aria-hidden></i>
-              <input class="form-input" type="text" placeholder="스토어 검색" />
-            </div>
-
-            <div class="button-group">
-              <button class="gnb-icon-button lg-hidden" type="button" aria-label="검색창 열기 버튼">
-                <i class="ic-search"></i>
-              </button>
-              <a class="gnb-icon-button sm-hidden" href="/" aria-label="스크랩북 페이지로 이동">
-                <i class="ic-bookmark"></i>
-              </a>
-              <a class="gnb-icon-button sm-hidden" href="/" aria-label="내 소식 페이지로 이동">
-                <i class="ic-bell"></i>
-              </a>
-              <a class="gnb-icon-button" href="/" aria-label="장바구니로 이동">
-                <i class="ic-cart"></i>
-              </a>
-              <button class="gnb-avatar-button sm-hidden" type="button" aria-label="마이메뉴 열기 버튼">
-                <div class="avatar-32">
-                  <img src="./assets/images/img-user-01.jpg" alt="유저 이미지" />
-                </div>
+          <div class="gnb-wrapper">
+            <div class="gnb-left">
+              <h1 class="logo">
+                <a href="/">
+                  <img src="./assets/images/logo.svg" alt="내일의 집" />
+                </a>
+              </h1>
+              <!-- nav 같은 sectioning 엘리먼트에는 반드시 이 엘리먼트가 무엇을 하는지에 대한 정보를 기입할 title heading 태그가 필요하다. -->
+              <!-- nav 는 모바일에서만 안보이고, 태블릿과 PC 에서는 보임-->
+              <nav class="gnb-nav sm-hidden">
+                <!-- 웹표준을 위해 반드시 적어줘야 하지만 디자인상으로는 존재 x -->
+                <h2 class="visually-hidden">메뉴</h2>
+                <ul class="gnb-nav-list">
+                  <li class="gnb-nav-item"><a href="/">커뮤니티</a></li>
+                  <li class="gnb-nav-item"><a href="/">스토어</a></li>
+                  <li class="gnb-nav-item"><a href="/">인테리어시공</a></li>
+                </ul>
+              </nav>
+              <!-- aria: 시각장애인이 무슨 용도인지 스크린 리더에 읽혀야됨 -->
+              <!-- 메뉴 열기(햄버거 버튼): 모바일에서만 보임 -->
+              <button class="gnb-ham-button gnb-icon-button sm-only" type="button" aria-label="메뉴 열기 버튼">
+                <i class="ic-menu"></i>
               </button>
             </div>
-
-            <button class="btn-primary btn-40 sm-hidden" type="button">
-              글쓰기
-              <i class="ic-chevron" aria-hidden></i>
-            </button>
+  
+            <div class="gnb-right">
+              <div class="input-group lg-only">
+                <i class="ic-search" aria-hidden></i>
+                <input class="form-input" type="text" placeholder="스토어 검색" />
+              </div>
+  
+              <div class="button-group">
+                <button class="gnb-search-button gnb-icon-button lg-hidden" type="button" aria-label="검색창 열기 버튼">
+                  <i class="ic-search"></i>
+                </button>
+                <a class="gnb-icon-button sm-hidden" href="/" aria-label="스크랩북 페이지로 이동">
+                  <i class="ic-bookmark"></i>
+                </a>
+                <a class="gnb-icon-button sm-hidden" href="/" aria-label="내 소식 페이지로 이동">
+                  <i class="ic-bell"></i>
+                </a>
+                <a class="gnb-icon-button" href="/" aria-label="장바구니로 이동">
+                  <i class="ic-cart"></i>
+                </a>
+                <button class="gnb-avatar-button sm-hidden" type="button" aria-label="마이메뉴 열기 버튼">
+                  <div class="avatar-32">
+                    <img src="./assets/images/img-user-01.jpg" alt="유저 이미지" />
+                  </div>
+                </button>
+              </div>
+  
+              <button class="btn-primary btn-40 sm-hidden" type="button">
+                글쓰기
+                <i class="ic-chevron" aria-hidden></i>
+              </button>
+            </div>
           </div>
         </div>
       </div>
