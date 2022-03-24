@@ -29,7 +29,7 @@
 .md-only {
   // 767px 이하에선 안보이게
   // (768 - 1)767px 까지만 적용
-  @media screen and (max-width: $md-breakpoint - 1) {
+  @media screen and (max-width: ($md-breakpoint - 1)) {
     display: none !important;
   }
 
@@ -42,7 +42,7 @@
 // 보이는 구간: 1200px~
 // 안보이는 구간: 1999px 이하
 .lg-only {
-  @media screen and (max-width: $lg-breakpoint - 1) {
+  @media screen and (max-width: ($lg-breakpoint - 1)) {
     display: none !important;
   }
 }
@@ -50,7 +50,7 @@
 // 보이는 구간: 768px 이상
 // 안보이는 구간: 767px 이하
 .sm-hidden {
-  @media screen and (max-width: $md-breakpoint - 1) {
+  @media screen and (max-width: ($md-breakpoint - 1)) {
     display: none !important;
   }
 }
@@ -58,7 +58,7 @@
 // 보이는 구간: 767px 이하 / 1200px 이상
 // 안보이는 구간: 768px 이상 ~ 1999px 이하
 .md-hidden {
-  @media screen and (min-width: $md-breakpoint) and (max-width: $lg-breakpoint - 1) {
+  @media screen and (min-width: $md-breakpoint) and (max-width: ($lg-breakpoint - 1)) {
     display: none !important;
   }
 }
