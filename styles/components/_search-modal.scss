@@ -7,6 +7,16 @@
   height: 100vh;
   padding: 12px 0;
   background-color: $white;
+  transform: translate3d(100%, 0, 0);
+  // 화면을 가릴 때 transform 을 쓰는 이유는 transition 이 자연스럽게 되기 때문이다.
+  // transition 이랑 상성이 안맞아 적용해도 자연스럽지 않은 속성들::after
+  // width, height, padding, margin, (border), top, right, bottim, left ...
+  // 위의 속성들은 transition 과 사용하는 것을 지양한다.
+  transition: transform .3s ease-in-out;
+
+  &.is-active {
+    transform: translate3d(0, 0, 0);
+  }
 
   &-header {
     margin-bottom: 20px;
