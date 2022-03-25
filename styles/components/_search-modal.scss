@@ -1,0 +1,26 @@
+.search-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $search-modal;
+  width: 100%;
+  height: 100vh;
+  padding: 12px 0;
+  background-color: $white;
+
+  &-form {
+    @include flexbox(between);
+
+    // 취소 버튼은 꼭 너비를 유지해야하고, 나머지 남는 너비를 input 이 차지
+    .input-group {
+      flex-grow: 1;
+    }
+
+    .btn-ghost {
+      flex-grow: 0;
+      flex-shrink: 0;
+      width: 56px;
+      margin-left: 8px;
+    }
+  }
+}
