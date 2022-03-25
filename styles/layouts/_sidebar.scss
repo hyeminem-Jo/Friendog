@@ -1,15 +1,22 @@
 .sidebar {
+  $sidebar-width: 240px;
   position: fixed;
   top: 0;
   left: 0;
-  width: 240px;
-  height: 100vh;
   z-index: $sidebar-level;
+  width: $sidebar-width;
+  height: 100vh;
   overflow-y: auto;
   padding: 32px 20px;
   background-color: $white;
+  transform: translate3d(-#{$sidebar-width}, 0, 0);
+  transition: transform .2s ease-in-out;
   overscroll-behavior: contain;
   // 사이드바 스크롤 시 뒤의 본문 스크롤 움직임 방지
+
+  &.is-active {
+    transform: translate3d(0, 0, 0);
+  }
 
   &-header {
     padding: 0 12px;
