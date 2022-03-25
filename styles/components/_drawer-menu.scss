@@ -1,12 +1,8 @@
-body {
-  background-color: rgba(0, 0, 0, 0.719);
-}
-
 .drawer-menu {
   $drawer-menu-item-height: 36px;
   $drawer-menu-list-padding: 20px;
   $community-length: 8;
-  $store-length: 4;
+  $store-length: 8;
   $expert-length: 2;
 
   @function _calculate-max-content-height($length) {
