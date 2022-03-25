@@ -1,0 +1,64 @@
+.sidebar {
+  width: 240px;
+  padding: 32px 20px;
+  background-color: $white;
+
+  &-header {
+    padding: 0 12px;
+
+    .logo {
+      @include flexbox(start);
+      // a 타겟 영역 줄이기
+
+      a {
+        display: block;
+      }
+
+      img {
+        display: block;
+        width: auto;
+        height: 20px;
+      }
+    }
+  }
+
+  &-user, &-auth {
+    @include flexbox(start);
+    height: 88px;
+  }
+
+  &-user {
+    // padding: 32px 0;
+    a {
+      @include flexbox(start);
+      width: 100%;
+      // border: 1px solid red;
+      @include text-style(14, $primary);
+      font-weight: 700;
+    }
+
+    .avatar-24 {
+      flex-grow: 0;
+      // 프로필 사진은 영역이 늘어나면 안되므로
+      flex-shrink: 0;
+      margin-right: 8px;
+    }
+
+    .username {
+      flex-grow: 1;
+      // 프로필 사진을 제외하고 나머지 영역 다 차지
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  &-auth {
+    @include flexbox(between);
+    // padding: 24px 0;
+
+    a {
+      width: 84px;
+    }
+  }
+}

@@ -2,6 +2,8 @@
   display: block;
   // 아바타 태그가 div 가 아닌 a 나 다른 inline 태그일 수 있기 때문에 방지용으로 display-block 을 넣어줌
   overflow: hidden;
+  background: url('./assets/images/img-user-default.png') no-repeat center;
+  background-size: contain;
   border-radius: 50%;
 
   img {
