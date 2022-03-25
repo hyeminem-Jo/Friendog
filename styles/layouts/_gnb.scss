@@ -16,21 +16,10 @@
       @include flexbox(end);
     }
 
-    .gnb-search-button {
-      margin-right: 4px;
+    .gnb-icon-button.is-search {
+      margin-right: 4px; 
+      // .gnb-icon-button 의 ㅣ고유 속성이 아닌 간격 조정, 주변 환경 바꾸기 위한 코드이므로 따로 뺌
     }
-  }
-
-  &-icon-button {
-    @include flexbox;
-    width: 32px;
-    height: 32px;
-    font-size: 24px;
-    color: $secondary;
-  }
-
-  &-ham-button {
-    color: $blue;
   }
 
   .logo {
