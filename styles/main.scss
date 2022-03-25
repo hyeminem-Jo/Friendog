@@ -1,6 +1,7 @@
 @import './constants/colors'; // 변수 선언과 관련된 것은 최상위에 import
 @import './constants/typography';
 @import './constants/breakpoints';
+@import './constants/box-shadows';
 
 @import './base/fonts'; // 파일 이름은 _fonts/scss 이지만 이렇게 적어도됨
 @import './base/normalize';
@@ -24,6 +25,7 @@
 // 단위 크기: module < component < layout
 @import './components/gnb-nav';
 @import './components/gnb-icon-buttons';
+@import './components/my-menu';
 
 @import './layouts/grids';
 @import './layouts/gnb';
