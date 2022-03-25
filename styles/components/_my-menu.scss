@@ -1,12 +1,32 @@
 .my-menu {
+  $button-size: 32px;
   $tooltip-size: 11px;
   position: relative;
-  border: 1px solid red;
+
+  &-button {
+    width: $button-size;
+    height: $button-size;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid $white;
+    transition: border-color .2s ease-in-out;
+
+    &:hover, &.is-active {
+      border-color: $blue;
+    }
+
+    img {
+      display: block;
+      width:  100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 
   &-content {
     @include pos-center-x;
     border-radius: 4px;
-    top: 100%;
+    top: $button-size + $tooltip-size + 8px;
     box-shadow: $dropdown-shadow;
 
     &::before, &::after {
