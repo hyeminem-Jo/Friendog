@@ -1,22 +1,21 @@
 .lnb {
-  $lnb-height-sm: 40px;
-  $lnb-height-md: 50px;
   $lnb-link-padding: 8px;
   $grid-margin: $sm-margin + calc($gutter / 2);
 
   position: relative;
   overflow-x: auto;
   overscroll-behavior: contain;
+  background-color: $white;
 
-  &::after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    content: '';
-    width: 100%;
-    height: 1px;
-    background-color: $border;
-  }
+  // &::after {
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: 0;
+  //   content: '';
+  //   width: 100%;
+  //   height: 1px;
+  //   background-color: $border;
+  // }
 
   // 스크롤바 제거
   @include no-scrollbar;
@@ -24,7 +23,7 @@
   &-list {
     @include inline-flexbox(start);
     padding: 0 ($grid-margin - $lnb-link-padding);
-    height: $lnb-height-sm;
+    height: $lnb-height-sm - 1px;
     margin-left: -#{$grid-margin};
     white-space: nowrap;
     border-bottom: 1px solid $border;
