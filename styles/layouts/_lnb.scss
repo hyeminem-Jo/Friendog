@@ -1,0 +1,59 @@
+.lnb {
+  overflow-x: auto;
+  overscroll-behavior: contain;
+  border-bottom: 1px solid $border;
+
+  &-list {
+    @include inline-flexbox(start);
+    // flex 와 inline-flex 의 공통점:
+    // 자식 요소를 나란히 나열시킨다.
+    // flex 와 inline-flex 의 차이점:
+    // flex 대상은 block 이며, inline-flex 의 대상은 inline-block 의 특성을 가진다.
+    // block 의 특성: 별도의 너비를 지정해주지 않는 이상 부모의 너비만큼의 width 값을 가진다.
+    // inline-block 의 특성: 부모가 아닌 자신의 컨텐츠 크기만큼의 width 값을 가짐, 본인이 나란히 나열됨
+    white-space: nowrap;
+    position: relative;
+    left: -8px;
+    // background-color: rgb(243, 243, 243);
+  }
+
+  &-item {
+    // flex-shrink: 0;
+
+    &.is-active {
+      a {
+        color: $blue;
+        border-bottom: 2px solid $blue;
+      }
+      // border-bottom: 2px solid $blue;
+
+      // &::after {
+      //   content: '';
+      //   position: absolute;
+      //   bottom: 0;
+      //   width: 100%;
+      //   height: 2px;
+      //   background-color: $blue;
+      //   transform: translate3d(0, 1px, 0);
+      //   z-index: 111;
+      // }
+    }
+
+    a {
+      @include inline-flexbox;
+      @include text-style(13, $dark);
+      height: 40px;
+      padding: 0 8px;
+      font-weight: 700;
+    }
+
+    .ic-new {
+      color: $red;
+    }
+  }
+
+  // 스크롤바 제거
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
