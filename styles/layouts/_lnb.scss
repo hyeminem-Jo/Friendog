@@ -40,7 +40,5 @@
   }
 
   // 스크롤바 제거
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  @include no-scrollbar;
 }
