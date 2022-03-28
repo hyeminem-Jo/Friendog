@@ -46,4 +46,51 @@
     width: 100%;
     height: auto;
   }
+
+  @include responsive(T) {
+    padding-right: 30px;
+    position: relative;
+
+    &-slider {
+      margin: 0;
+      overflow: hidden;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+
+    &-thumbnail {
+      position: static;
+      transform: none;
+    }
+
+    .thumbnail-list {
+      @include flexbox(start);
+    }
+
+    .thumbnail-item {
+      margin: 0;
+      margin-right: 8px;
+
+      &.tns-nav-active {
+        button {
+          transform: none;
+          border: 2px solid $blue;
+        }
+      }
+      
+      button {
+        @include flexbox; // img 가 border 에 밀려나가지 않게 아예 img 의 위치를 중앙으로 고정
+        width: 56px;
+        height: 56px;
+        opacity: 1;
+        overflow: hidden;
+        border-radius: 4px;
+      }
+
+      img {
+        display: block;
+        width: 56px; // border 에 찌부되서 이미지가 작아지는 현상 해결
+      }
+    }
+  }
 }
