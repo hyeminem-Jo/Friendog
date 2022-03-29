@@ -97,7 +97,6 @@
   @include responsive(D) {
     @include flexbox(end, start);
     flex-direction: row-reverse;
-    border: 1px solid red;
 
     &-thumbnail {
       margin-right: 8px;
