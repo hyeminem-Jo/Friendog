@@ -1,11 +1,3 @@
-body {
-  background-color: black;
-
-  .product-section-header {
-    margin-bottom: 10px;
-  }
-}
-
 .product-section-header {
   @include flexbox(start);
   position: relative;
