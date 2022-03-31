@@ -1,15 +1,17 @@
 .score-stats {
-  
   &-list {
     display: inline-block;
   }
+
   &-item {
     @include flexbox(start);
     @include text-style(12, $secondary);
     margin-bottom: 4px;
 
     &.is-active {
-      dt, .count {
+
+      dt,
+      .count {
         font-weight: 700;
         color: $blue;
       }
@@ -53,6 +55,7 @@
       dt {
         margin-right: 8px;
       }
+
       dd {
         .bar-graph {
           margin-right: 8px;
