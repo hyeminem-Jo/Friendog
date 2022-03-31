@@ -7,14 +7,14 @@
 
   .score-summary,
   .score-detail {
-    // flex: 1;
-    width: 50%;
+    flex: 1;
+    // width: 50%;
   }
 
   .score-summary {
     @include flexbox;
     flex-direction: column;
-    order: 1;
+    order: 1; 
 
     .average-score {
       @include text-style(24, $dark);
@@ -47,8 +47,8 @@
 
     .score-summary,
     .score-detail {
-      // flex: none;
-      width: auto;
+      flex: none;
+      // width: auto;
     }
 
     .score-summary {
