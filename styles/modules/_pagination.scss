@@ -65,7 +65,7 @@
         @extend %page-item-base;
         min-width: 26px;
         // 숫자가 늘어날 것을 대비 (처음엔 26px 였다가 숫자가 999.. 늘어나면 텍스트 길이에 따라 유동적으로 너비가 늘어남
-        padding: 0 4px;
+        padding: 0 4px 2px;
 
         &:hover {
           color: $blue;
