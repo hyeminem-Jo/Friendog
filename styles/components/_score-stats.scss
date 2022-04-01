@@ -37,7 +37,7 @@
         overflow: hidden;
 
         .active-bar {
-          width: 30px;
+          width: 0;
           height: 5px;
           background-color: $blue;
           border-radius: calc(5px / 2);
