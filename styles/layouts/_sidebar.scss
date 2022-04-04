@@ -60,11 +60,9 @@
     }
 
     .username {
+      @include truncate;
       flex-grow: 1;
       // 프로필 사진을 제외하고 나머지 영역 다 차지
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
     }
   }
 
