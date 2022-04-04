@@ -18,11 +18,10 @@ const productCarousel = tns({
   // loop: true, // 무한 루프
 });
 
-const userGallery = tns({
-  container: '.user-gallery .slider-list',
+const userGalleryMobile = tns({
+  container: '.user-gallery.is-mobile .slider-list',
   controls: false, // prev, next 버튼
-  controlsContainer: '.user-gallery-controls',
-  navContainer: '.user-gallery .thumbnail-list', 
+  navContainer: '.user-gallery.is-mobile .thumbnail-list', 
   navAsThumbnails: true,
   gutter: 4,
   edgePadding: 16, // 옆에 튀어나오게 하기
@@ -30,12 +29,18 @@ const userGallery = tns({
   arrowKeys: true,
   mouseDrag: true,
   preventScrollOnTouch: 'auto',
-  responsive: {
-    // 태블릿
-    768: {
-      gutter: 6,
-      controls: true, // prev, next 버튼
-      edgePadding: 75,
-    }
-  }
+})
+
+const userGalleryDesktop = tns({
+  container: '.user-gallery.is-desktop .slider-list',
+  controls: true, // prev, next 버튼
+  controlsContainer: '.user-gallery.is-desktop .user-gallery-controls',
+  navContainer: '.user-gallery.is-desktop .thumbnail-list', 
+  navAsThumbnails: true,
+  gutter: 6,
+  edgePadding: 75, // 옆에 튀어나오게 하기
+  loop: false,
+  arrowKeys: true,
+  mouseDrag: true,
+  preventScrollOnTouch: 'auto',
 })
