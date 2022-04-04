@@ -21,6 +21,9 @@ const productCarousel = tns({
 const userGallery = tns({
   container: '.user-gallery .slider-list',
   controls: false, // prev, next 버튼
+  controlsContainer: '.user-gallery-controls',
+  navContainer: '.user-gallery .thumbnail-list', 
+  navAsThumbnails: true,
   gutter: 4,
   edgePadding: 16, // 옆에 튀어나오게 하기
   loop: false,

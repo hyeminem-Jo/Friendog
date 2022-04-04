@@ -204,7 +204,7 @@
             <div class="product-carousel-slider">
               <ol class="slider-list">
                 <!-- 어떤 tab 버튼과 연결 되었는지 aria-labelledby 로 명시 -->
-                <li class="slider-item" role="tabpaneltabpanel" aria-labelledby="product-carousel-tab-1">
+                <li class="slider-item" role="tabpanel" aria-labelledby="product-carousel-tab-1">
                   <figure>
                     <img src="./assets/images/img-product-01.jpg" alt="">
                     <figcaption class="visually-hidden">보아르 전기히터 상세 이미지 1</figcaption>
@@ -541,18 +541,26 @@
                       <div class="gallery-card">
                         <figure class="gallery-card-image">
                           <img src="./assets/images/img-review-05.jpg" alt="">
-                          <figcaption class="visually-hidden">히스이 님의 스타일링샷</figcaption>
+                          <figcaption class="visually-hidden">수비닝 님의 스타일링샷</figcaption>
                         </figure>
                         <div class="gallery-card-detail">
                           <a class="avatar-32" href="/">
                             <!-- <img src="./assets/images/img-user-01.jpg" alt="유저 이미지" /> -->
                           </a>
-                          <a class="username" href="/">히스이</a>
+                          <a class="username" href="/">수비닝</a>
                           <span class="order">1/461</span>
                         </div>
                       </div>
                     </li>
                   </ol>
+                  <div class="user-gallery-controls sm-hidden">
+                    <button class="control-button is-prev" type="button" aria-label="이전 이미지">
+                      <i class="ic-chevron" aria-hidden></i>
+                    </button>
+                    <button class="control-button is-next" type="button" aria-label="다음 이미지">
+                      <i class="ic-chevron" aria-hidden></i>
+                    </button>
+                  </div>
                 </div>
                 <div class="user-gallery-thumbnail">
                   <ol class="thumbnail-list" role="tablist">
