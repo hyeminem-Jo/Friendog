@@ -49,6 +49,7 @@
   @include responsive(T) {
     padding-right: 30px;
     position: relative;
+    margin-bottom: 30px;
 
     &-slider {
       margin: 0;
