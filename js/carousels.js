@@ -17,3 +17,22 @@ const productCarousel = tns({
   // autoplay: true, // 자동으로 움직임
   // loop: true, // 무한 루프
 });
+
+const userGallery = tns({
+  container: '.user-gallery .slider-list',
+  controls: false, // prev, next 버튼
+  gutter: 4,
+  edgePadding: 16, // 옆에 튀어나오게 하기
+  loop: false,
+  arrowKeys: true,
+  mouseDrag: true,
+  preventScrollOnTouch: 'auto',
+  responsive: {
+    // 태블릿
+    768: {
+      gutter: 6,
+      controls: true, // prev, next 버튼
+      edgePadding: 75,
+    }
+  }
+})
