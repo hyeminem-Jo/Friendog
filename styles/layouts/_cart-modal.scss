@@ -1,6 +1,7 @@
 .cart-modal {
   @include pos-center(fixed);
   z-index: $cart-modal-level;
+  display: none;
   width: calc(100vw - #{$grid-margin * 2});
   max-width: 360px;
   background-color: $white;
@@ -8,6 +9,10 @@
   border-radius: 8px;
   padding: 40px 24px;
   text-align: center;
+
+  &.is-active {
+    display: block;
+  }
 
   .cart-title {
     @include text-style(16, $dark);
@@ -29,7 +34,7 @@
   @include responsive(D) {
     padding-right: 32px;
     padding-left: 32px;
-    
+
     .cart-title {
       @include text-style(18);
       margin-bottom: 16px;
