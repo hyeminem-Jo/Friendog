@@ -1,6 +1,7 @@
 .global-footer {
   padding: 32px 0 40px;
   background-color: $background;
+  margin-bottom: $order-cta-height;
 
   &-title {
     @include text-style(13, $dark);
