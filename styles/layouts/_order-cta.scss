@@ -1,0 +1,36 @@
+.order-cta {
+  @include flexbox;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 4px;
+  height: $order-cta-height;
+  background-color: $white;
+  z-index: $order-cta-level;
+
+  .btn-ghost {
+    flex-direction: column; // 이미 button 컴포넌트에 flex 가 적용되어있음
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: 72px;
+    margin-right: 4px;
+
+    i {
+      font-size: 24px;
+      color: $primary;
+    }
+
+    span {
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 16px;
+      letter-spacing: -0.005em;
+      color: $secondary;
+    }
+  }
+
+  .btn-primary {
+    flex-grow: 1;
+  }
+}
