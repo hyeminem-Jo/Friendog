@@ -1,9 +1,16 @@
 .floating-order-form {
+  $global-header-height: $gnb-height-md + $lnb-height-md + $product-tab-height-md;
+  
   @include flexbox(start, start);
+  position: sticky; 
+  // 최상위 부모(main) 영역 내에서만 움직이고, footer 부분이 되자마자 sticky 가 풀림
+  top: $global-header-height;
   flex-direction: column;
-  height: 700px; // TEMP
+  max-height: calc(100vh - #{$global-header-height});
+  min-height: calc(100vh - #{$global-header-height + $global-footer-height} );
+  padding: 24px 0;
 
-  >* {
+  > * {
     // 모든 자식 요소
     width: 100%;
   }
