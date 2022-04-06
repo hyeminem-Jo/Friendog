@@ -10,7 +10,10 @@ const $orderCta = document.querySelector('.order-cta')
 
 // 구조분해할당
 const [$orderCtaBookmarkBtn, $orderCtaBuyBtn] = $orderCta.children
+const [$iconBookmark, $numOfBookmarks] = $orderCtaBookmarkBtn.children
 const $orderFormModal = document.querySelector('.order-form-modal')
+
+console.log($orderCtaBookmarkBtn.children);
 
 function openOrderFormModal() {
   // alert('modal');
@@ -24,3 +27,21 @@ function closeOrderFormModal() {
 
 $orderCtaBuyBtn.addEventListener('click', openOrderFormModal)
 $overlay.addEventListener('click', closeOrderFormModal)
+$orderCtaBookmarkBtn.addEventListener('click', function () {
+  let count = Number($numOfBookmarks.innerHTML.replaceAll(",",""));
+  
+  if (this.classList.contains('is-active')) {
+    $iconBookmark.className = 'ic-bookmark';
+    count -= 1;
+  } else {
+    $iconBookmark.className = 'ic-bookmark-filled';
+    count += 1;
+  }
+
+  this.classList.toggle('is-active')
+  $numOfBookmarks.innerHTML = count.toLocaleString(); // 숫자에 , 를 붙여줌
+  
+  // console.log(typeof count); // string
+  // console.log(count.replace(",","")); // "18,302" => "18302"
+})
+
