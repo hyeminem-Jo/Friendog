@@ -40,6 +40,7 @@ $orderCtaBookmarkBtn.addEventListener('click', function () {
 
   this.classList.toggle('is-active')
   $numOfBookmarks.innerHTML = count.toLocaleString(); // 숫자에 , 를 붙여줌
+  $numOfBookmarks.setAttribute('aria-label', `북마크 ${count.toLocaleString()}회`)
   
   // console.log(typeof count); // string
   // console.log(count.replace(",","")); // "18,302" => "18302"
