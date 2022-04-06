@@ -1,10 +1,10 @@
 const $sidebarMenuBtn = document.querySelector('.gnb-icon-button.is-menu');
 const $sidebar = document.querySelector('.sidebar')
-const $sidebarOverlay = document.querySelector('.overlay');
+const $overlay = document.querySelector('.overlay');
 
 function openSidebar() {
   $sidebar.classList.add('is-active');
-  $sidebarOverlay.classList.add('is-active');
+  $overlay.classList.add('is-active');
 }
 
 function closeSidebar() {
@@ -13,4 +13,4 @@ function closeSidebar() {
 }
 
 $sidebarMenuBtn.addEventListener('click', openSidebar);
-$sidebarOverlay.addEventListener('click', closeSidebar);
+$overlay.addEventListener('click', closeSidebar);
