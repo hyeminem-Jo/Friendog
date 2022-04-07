@@ -7,7 +7,7 @@ function closeGnbSearchHistory(e) {
   if (!$gnbSearch.contains(e.target)) {
     $gnbSearchHistory.classList.remove('is-active');
     window.removeEventListener('click', closeGnbSearchHistory)
-    console.log('window')
+    // console.log('window')
   }
 }
 
