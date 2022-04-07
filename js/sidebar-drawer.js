@@ -1,4 +1,4 @@
-const $drawerMenuBtns = document.querySelectorAll('.sidebar-nav .drawer-menu-button');
+const $$drawerMenuBtns = document.querySelectorAll('.sidebar-nav .drawer-menu-button');
 
 function drawerMenuHandler() {
   const $drawerMenu = this.parentNode;
@@ -6,6 +6,6 @@ function drawerMenuHandler() {
   $drawerMenu.classList.toggle('is-open');
 }
 
-$drawerMenuBtns.forEach(($drawerMenuBtn) => {
+$$drawerMenuBtns.forEach(($drawerMenuBtn) => {
   $drawerMenuBtn.addEventListener('click', drawerMenuHandler);
 });
