@@ -2,10 +2,11 @@ const $myMenu = document.querySelector('.my-menu')
 const $myMenuBtn = document.querySelector('.my-menu-button')
 
 function closeMyMenu(e) {
+  // .my-menu 외의 영역을 클릭하면 .my-menu 닫기
   if (!$myMenu.contains(e.target)) {
     $myMenu.classList.remove('is-active');
     window.removeEventListener('click', closeMyMenu)
-    console.log('window')
+    // console.log('window')
   }
 }
 
@@ -16,6 +17,7 @@ function toggleMyMenu() {
   // 여기서 끝이 아닌, toggleMyMenu 가 실행된 후에 window 가 계속 발생하는데 이때 완전히 이벤트를 제거해줘야 한다.
   // => removeEventListener()
   if (!$myMenu.classList.contains('is-active')) {
+    // is-active 가 안되어있을 때(닫혀있을 때) 클릭하면 window 이벤트(닫는 이벤트) 활성화
     window.addEventListener('click', closeMyMenu)
   }
   $myMenu.classList.toggle('is-active')
