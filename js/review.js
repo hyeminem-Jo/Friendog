@@ -1,6 +1,6 @@
 const $$reviewLikeBtns = document.querySelectorAll('.review-card-footer button')
 
-console.log($$reviewLikeBtns);
+// console.log($$reviewLikeBtns);
 
 const HELPFUL = "도움됨"
 const NOT_HELPFUL = "도움이 돼요"

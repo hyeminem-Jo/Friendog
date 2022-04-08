@@ -5,7 +5,7 @@ const $HistoryList = $gnbSearchHistory.querySelector('ol');
 const $deleteAllHistoryBtn = $gnbSearchHistory.querySelector('.search-history-header button');
 const $$deleteHistoryBtns = $HistoryList.querySelectorAll('.delete-button');
 
-console.log($$deleteHistoryBtns)
+// console.log($$deleteHistoryBtns)
 
 function closeGnbSearchHistory() {
   $gnbSearchHistory.classList.remove('is-active')

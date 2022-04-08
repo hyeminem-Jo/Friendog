@@ -13,7 +13,7 @@ const [$orderCtaBookmarkBtn, $orderCtaBuyBtn] = $orderCta.children
 const [$iconBookmark, $numOfBookmarks] = $orderCtaBookmarkBtn.children
 const $orderFormModal = document.querySelector('.order-form-modal')
 
-console.log($orderCtaBookmarkBtn.children);
+// console.log($orderCtaBookmarkBtn.children);
 
 function openOrderFormModal() {
   // alert('modal');
