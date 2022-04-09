@@ -72,12 +72,55 @@ function detectTabPanelPosition() {
     // console.log(id, position) // product-spec 1806.796875
     productTabPanelPositionMap[id] = position
   })
-  console.log(productTabPanelPositionMap['product-spec'])
+  // console.log(productTabPanelPositionMap)
+}
+
+function upDateActiveTabScroll() {
+  // 스크롤 위치에 따라서 activeTab 업데이트
+  // 준비물:
+  // 1. 현재 유저가 얼마만큼 스크롤을 했느냐 => window.scrollY
+  // 2. 각 tabPanel y축 위치
+
+  const scrolledAmount = window.scrollY + (window.innerWidth >= 768 ? TOP_HEADER_DESKTOP + 80 : TOP_HEADER_MOBILE + 8)
+  // TOP_HEADER_DESKTOP + 80 : 유저 관점에서 딱 section 에 도달해서 버튼이 활성화되기 보다, section 이 눈에 보일 시점에 미리 버튼 색이 바뀌면 더 좋을 것 같아서 padding: 80px 만큼의 간격을 가진 부분을 이용해 + 80 을 해주었다. > 기준점 낮추기 
+  // (모바일은 section-divider 의 height 값(8px) 만큼)
+
+  // console.log(scrolledAmount)
+
+  let newActiveTab
+  if (scrolledAmount >= productTabPanelPositionMap['product-recommendation']) {
+    newActiveTab = $$productTabBtns[4] // 추천 버튼
+  } else if (scrolledAmount >= productTabPanelPositionMap['product-shipment']) {
+    newActiveTab = $$productTabBtns[3] // 배송/환불 버튼
+  } else if (scrolledAmount >= productTabPanelPositionMap['product-inquiry']) {
+    newActiveTab = $$productTabBtns[2] // 문의 버튼
+  } else if (scrolledAmount >= productTabPanelPositionMap['product-review']) {
+    newActiveTab = $$productTabBtns[1] // 리뷰 버튼
+  } else if (scrolledAmount >= productTabPanelPositionMap['product-spec']) {
+    newActiveTab = $$productTabBtns[0] // 상품정보 버튼
+  }
+
+  if (newActiveTab) {
+    newActiveTab = newActiveTab.parentNode
+
+    if (newActiveTab !== currentActiveTab) {
+      // 1. 현재 활성화될 버튼에 active 추가
+      newActiveTab.classList.add('is-active')
+      // 1. 이전 버튼으로부터 active 클래스 제거
+      currentActiveTab.classList.remove('is-active')
+      // 3. 이제 active 클래스가 제거된 이전 버튼이 아닌 [현재 활성화된 버튼]으로 currentActiveTab 갱신
+      currentActiveTab = newActiveTab
+    }
+  }
+
+  // console.log(newActiveTab)
 }
 
 // window 내의 html 요소들이 모두 load 된 후 위치를 파악하도록 함
 // 모바일 버전 등으로 화면 사이즈를 변화시켰을 때 또한 대비를 하기 위해 resize 때도 위치를 파악해야 한다.
 window.addEventListener('load', detectTabPanelPosition)
 window.addEventListener('resize', detectTabPanelPosition)
+// 스크롤 위치에 따라서 activeTab 업데이트
+window.addEventListener('scroll', upDateActiveTabScroll)
 
 // console.log(productTabPanelList)
