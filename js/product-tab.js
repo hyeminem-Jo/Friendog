@@ -76,6 +76,7 @@ const productTabPanelPositionMap = {}
 // }
 
 function detectTabPanelPosition() {
+  console.log(222)
   productTabPanelList.forEach(($tabPanel) => {
     // console.log($tabPanel); 실행 결과: 
     // <section class="product-spec"></section>,
@@ -92,6 +93,7 @@ function detectTabPanelPosition() {
 }
 
 function upDateActiveTabScroll() {
+  console.log(111)
   // 스크롤 위치에 따라서 activeTab 업데이트
   // 준비물:
   // 1. 현재 유저가 얼마만큼 스크롤을 했느냐 => window.scrollY
@@ -154,9 +156,12 @@ function upDateActiveTabScroll() {
 // window 내의 html 요소들이 모두 load 된 후 위치를 파악하도록 함
 // 모바일 버전 등으로 화면 사이즈를 변화시켰을 때 또한 대비를 하기 위해 resize 때도 위치를 파악해야 한다.
 window.addEventListener('load', detectTabPanelPosition)
-window.addEventListener('resize', detectTabPanelPosition)
+// 화면 사이즈에 따라 좌표가 달라지는 것을 대응하기 위해 resize 적용
+window.addEventListener('resize', _.throttle(detectTabPanelPosition, 1000)) 
 // 스크롤 위치에 따라서 activeTab 업데이트
-window.addEventListener('scroll', upDateActiveTabScroll)
+window.addEventListener('scroll', _.throttle(upDateActiveTabScroll, 300) )
+// window.addEventListener('scroll',upDateActiveTabScroll)
+// 스크롤 과잉 실행 방지 - lodash 의 throttle(throttle 을 적용하고 싶은 함수, 시간 delay 값)
 
 // console.log(productTabPanelList)
 
