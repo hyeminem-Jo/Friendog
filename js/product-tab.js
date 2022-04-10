@@ -3,8 +3,8 @@ const $$productTabBtns = $productTab.querySelectorAll('button')
 
 // console.log($$productTabBtns)
 
-const TOP_HEADER_DESKTOP = 80 + 50 + 54
-const TOP_HEADER_MOBILE = 50 + 40 + 40
+const TOP_HEADER_DESKTOP = 100 + 50 + 54
+const TOP_HEADER_MOBILE = 70 + 40 + 40
 
 let currentActiveTab = $productTab.querySelector('.is-active')
 let disableUpdating = false
@@ -93,7 +93,7 @@ function detectTabPanelPosition() {
 }
 
 function upDateActiveTabScroll() {
-  console.log(111)
+  // console.log(111)
   // 스크롤 위치에 따라서 activeTab 업데이트
   // 준비물:
   // 1. 현재 유저가 얼마만큼 스크롤을 했느냐 => window.scrollY
