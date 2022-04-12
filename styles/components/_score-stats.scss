@@ -13,7 +13,7 @@
       dt,
       .count {
         font-weight: 700;
-        color: $blue;
+        color: $point;
       }
     }
 
@@ -39,7 +39,7 @@
         .active-bar {
           width: 0;
           height: 5px;
-          background-color: $blue;
+          background-color: $point;
           border-radius: calc(5px / 2);
           animation: slide-active-bar 1s;
         }

@@ -18,8 +18,8 @@
 
     &.is-active {
       button {
-        color: $blue;
-        border-bottom-color: $blue;
+        color: $point;
+        border-bottom-color: $point;
       }
     }
 
@@ -33,7 +33,7 @@
       border-bottom: 2px solid transparent;
 
       &:active {
-        color: $blue;
+        color: $point;
       }
     }
 
@@ -68,7 +68,7 @@
 
   @include responsive(D) {
     &-item button:hover {
-      color: $blue;
+      color: $point;
     }
   }
 }

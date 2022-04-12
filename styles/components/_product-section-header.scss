@@ -10,7 +10,7 @@
   }
 
   .badge {
-    @include text-style(16, $blue);
+    @include text-style(16, $point);
     margin-left: 8px;
     // title 만 있을 땐 사실상 margin 이 필요없기 때문에 배지에 margin-left 를 부여
   }
@@ -26,7 +26,7 @@
   }
 
   .text-button {
-    @include text-style(14, $blue);
+    @include text-style(14, $point);
     font-weight: 700;
     padding: $grid-margin;
   }

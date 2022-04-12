@@ -10,11 +10,11 @@
   border-radius: 50%;
 
   &.is-menu {
-    color: $blue;
+    color: $point;
     // 고유 형태의 속성들은 따로 빼둠
 
     &:active {
-      color: $blue-dark;
+      color: $point-dark;
     }
   }
 
@@ -44,14 +44,14 @@
     text-align: center;
     color: $white;
     border-radius: calc($badge-size / 2);
-    background-color: $red;
+    background-color: $pink;
   }
 
   // 768px ~
   @include responsive(T) {
     &:hover {
       color: $white;
-      background-color: $blue;
+      background-color: $point;
     }
   }
 }

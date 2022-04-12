@@ -52,7 +52,7 @@
         a,
         button {
           color: $white;
-          background-color: $blue;
+          background-color: $point;
 
           &:hover {
             color: $white;
@@ -68,7 +68,7 @@
         padding: 0 4px 2px;
 
         &:hover {
-          color: $blue;
+          color: $point;
         }
       }
     }

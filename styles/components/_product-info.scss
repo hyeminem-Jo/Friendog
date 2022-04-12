@@ -5,7 +5,7 @@
     margin-bottom: 16px;
 
     .info-brand {
-      @include text-style(13, $blue);
+      @include text-style(13, $point);
       font-weight: 700;
 
       &:hover {
@@ -28,7 +28,7 @@
       }
 
       p {
-        @include text-style(13, $blue);
+        @include text-style(13, $point);
         font-weight: 700;
       }
     }
@@ -47,7 +47,7 @@
       font-size: 20px;
       line-height: 24px;
       font-weight: 700;
-      color: $blue;
+      color: $point;
 
       .rate {
         font-family: $font-price;
@@ -72,7 +72,7 @@
 
       strong {
         // strong 태그는 bold(700) 가 알아서 들어감
-        color: $blue;
+        color: $point;
       }
     }
   }

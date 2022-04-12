@@ -11,7 +11,7 @@
 
   &.is-active {
     .drawer-menu-button {
-      color: $blue;
+      color: $point;
     }
   }
 
@@ -94,7 +94,7 @@
   &-item {
     &.is-active {
       a {
-        color: $blue;
+        color: $point;
       }
     }
 
