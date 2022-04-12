@@ -7,7 +7,7 @@ const cssnano = require('cssnano')
 const autoprefixer = require('autoprefixer')
 const imageminJpegtran = require('imagemin-jpegtran')
 
-const REPOSITORY_NAME = 'friendog'
+const REPOSITORY_NAME = 'Friendog'
 const buildDir = path.resolve(__dirname, '../build')
 
 const faviconFileList = [
