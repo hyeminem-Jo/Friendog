@@ -7,7 +7,7 @@
   height: 100vh;
   background-color: $primary;
   opacity: 0;
-  visibility: hidden; // 시각적으로 존재하지 않게 해줌
+  visibility: hidden; 
   transition: opacity .3s ease-in-out, visibility .3s;
 
   &.is-active {

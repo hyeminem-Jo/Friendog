@@ -29,7 +29,6 @@
   @extend %form-base;
 }
 
-// select
 .select-group {
   position: relative;
 
@@ -45,7 +44,6 @@
 
   .form-select {
     padding-right: 40px;
-    // 텍스트 넘침 방지 ...
     text-overflow: ellipsis;
   }
 
@@ -55,11 +53,9 @@
     font-size: 24px;
     color: $tertiary;
     pointer-events: none;
-    // absolute 속성 때문에 상위에 위치해버려 클릭을 막아버리는 것을 방지하기 위해 caret 아이콘에 대한 click 이벤트 자체를 없애준다.
   }
 }
 
-// input
 .input-group {
   position: relative;
 

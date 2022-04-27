@@ -1,6 +1,3 @@
-// sass 에서 map()은 key: value 형태의 데이터 타입
-// 자바스크립트에서 객체 같은 개념..?
-// map-get(): sass 에서 제공하는 내장 함수
 $flex-map: (
   start: flex-start,
   end: flex-end,
@@ -13,11 +10,7 @@ $flex-map: (
 @function _get-flex-value($key) {
   @return map-get($flex-map, $key);
 }
-// flex-end => end
-// flex-start => start
-// space-between => between ...
 
-// justigfy-content, align-items
 @mixin flexbox($jc: center, $ai: center) {
   display: flex;
   justify-content: _get-flex-value($jc);
@@ -36,35 +29,3 @@ $flex-map: (
   justify-content: _get-flex-value($jc);
   align-items: _get-flex-value($ai);
 }
-
-// .list {
-//   @include flexbox(end, stretch);
-// }
-
-// mixin 은 하나의 값(value)이 아닌, key 와 value 를 통채로 반환하기 때문에 하나의 값만 반환하는 function 을 중간에 이용해준다.
-// 변수 넣음 > mixin 에서 값을 받아 function 실행 > function 에서 속성에 대한 값(value)를 반환
-
-// p {
-//   font-size: _get-flex-value();
-// }
-
-// @function _get-flex-value($key) {
-//   @if ($key == start) {
-//     @return flex-start;
-//   }
-//   @if ($key == end) {
-//     @return flex-end;
-//   }
-//   @if ($key == between) {
-//     @return space-between;
-//   }
-//   @if ($key == around) {
-//     @return space-around;
-//   }
-//   @if ($key == stretch) {
-//     @return stretch;
-//   }
-//   @if ($key == center) {
-//     @return center;
-//   }
-// } => 다음의 것을 map 으로 간단하게 표현할 수 있다.

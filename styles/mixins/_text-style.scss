@@ -1,5 +1,4 @@
 @mixin text-style-12($color: false) {
-  // ex. font-size 가 12px 인 폰트의 묶음
   font-size: $font-size-12;
   line-height: $line-height-12;
   letter-spacing: $letter-spacing-12;
@@ -55,7 +54,6 @@
     @include text-style-24();
   }
 
-  // 유효성 검사
   @if (type-of($color) == color) {
     color: $color;
   }

@@ -1,8 +1,4 @@
-// 이 파일에 한해서는 scss-lint 를 적용하지 않겠다는 와일드카드
-// 근데 scss-lint 가 안되서 삭제함;
-// scss-lint: disable all
 @font-face {
-  // url 경로의 기준은 css 여야 한다.
   font-family: 'tomorrow';
   src: url('./assets/fonts/tomorrow.eot');
   src: url('./assets/fonts/tomorrow.eot#iefix') format('embedded-opentype'),

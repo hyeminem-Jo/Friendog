@@ -1,19 +1,16 @@
 @mixin responsive($screen) {
   @if ($screen == 'T') {
-    // Tablet
     @media screen and (min-width: $md-breakpoint) {
       @content;
     }
   }
   @if ($screen == 'D') {
-    // Desktop
     @media screen and (min-width: $lg-breakpoint) {
       @content;
     }
   }
 }
 
-// 모바일만 적용 (태블릿 사이즈 미만 ~767px)
 @mixin mobile-only() {
   @media screen and (max-width: ($md-breakpoint - 1px)) {
     @content;

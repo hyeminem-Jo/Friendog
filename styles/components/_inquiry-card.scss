@@ -44,8 +44,6 @@
       padding-left: 20px;
 
       &:first-child:not(:last-child) {
-        // first 요소 이자, lastchild 가 아닌 것
-        // not: 답변이 하나만 있을 경유를 대비 (요소가 하나만 있으면 그것이 처음이자 마지막 요소)
         margin-bottom: 12px;
       }
     }

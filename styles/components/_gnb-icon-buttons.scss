@@ -11,7 +11,6 @@
 
   &.is-menu {
     color: $point;
-    // 고유 형태의 속성들은 따로 빼둠
 
     &:active {
       color: $point-dark;
@@ -47,7 +46,6 @@
     background-color: $pink;
   }
 
-  // 768px ~
   @include responsive(T) {
     &:hover {
       color: $white;

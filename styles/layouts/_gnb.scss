@@ -1,6 +1,3 @@
-// module : 여기저기서 쓰이는 시안
-// layout : 하나만 있는 시안 (_grids.scss 는 레이아웃으로써의 역할)
-
 .gnb {
   position: relative;
   background-color: $white;
@@ -19,7 +16,6 @@
 
     .gnb-icon-button.is-search {
       margin-right: 4px;
-      // .gnb-icon-button 의 ㅣ고유 속성이 아닌 간격 조정, 주변 환경 바꾸기 위한 코드이므로 따로 뺌
     }
   }
 
@@ -83,12 +79,10 @@
     .logo {
       margin-right: 32px;
       position: static;
-      // position 을 static 으로 해제할 때 top, left 등의 효과는 자동으로 사라짐
       transform: none;
 
       img {
         height: 40px;
-        // height: 24px;
       }
     }
 

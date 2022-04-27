@@ -19,12 +19,6 @@
     &.is-community {
       .drawer-menu-content {
         max-height: _calculate-max-content-height($community-length)
-        // max-height: ($drawer-menu-item-height * $community-length) + $drawer-menu-list-padding;
-        // 36px * 4(li 개수) + 8px(padding)
-        // max-height 값을 현재 height 값에 딱 맞게 해야 애니메이션이 부드럽게 됨
-        // li 의 갯수에 따라 height 값이 바뀌기 때문에 li 의 갯수를 구하는 것이 중요
-        // 구하는 법: console 이용
-        // => ul Element 를 클릭한 후 console 창에 $0.children 을 하면 그 안의 li 요소들이 얼마나 있는지 파악이 가능하다.
       }
     }
 
@@ -46,10 +40,6 @@
       }
     }
 
-    // .drawer-menu-content {
-    //   max-height: 152px;
-    // }
-
     .drawer-menu-list {
       padding-bottom: $drawer-menu-list-padding;
     }
@@ -68,8 +58,8 @@
 
     i {
       &:first-child {
-        position: relative; // TODO: check
-        top: 1px; // TODO: check
+        position: relative; 
+        top: 1px; 
         margin-right: 8px;
         font-size: 24px;
         color: $primary;

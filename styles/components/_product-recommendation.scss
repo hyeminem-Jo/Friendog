@@ -5,7 +5,7 @@
   }
 
   .product-item {
-    width: calc(50% - 10px); // (100% - 20px) / 2 그대로 쓰면 문법 오류
+    width: calc(50% - 10px); 
 
     a {
       display: block;
@@ -29,7 +29,7 @@
 
   @include responsive(T) {
     .product-item {
-      width: calc(33.3333% - 10.6666px); // (100% - 32px) / 3
+      width: calc(33.3333% - 10.6666px); 
       margin-bottom: 0 !important;
 
       &:last-child {
@@ -41,7 +41,7 @@
   @include responsive(D) {
     .product-item a:hover {
       img {
-        transform: translate(-50%, -50%) scale(1.1); // transform 덮어씌워짐 방지
+        transform: translate(-50%, -50%) scale(1.1); 
       }
 
       .product-card-title {

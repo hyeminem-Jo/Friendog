@@ -1,5 +1,6 @@
 .product-tab {
   position: sticky;
+  position: -webkit-sticky;
   top: $gnb-height-sm + $lnb-height-sm - 1px;
   z-index: $product-tab-level;
   width: 100%;
@@ -13,7 +14,6 @@
   }
 
   &-item {
-    // width: calc(100% / 5);
     flex: 1;
 
     &.is-active {

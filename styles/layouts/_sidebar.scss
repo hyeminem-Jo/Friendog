@@ -12,7 +12,6 @@
   transform: translate3d(-#{$sidebar-width}, 0, 0);
   transition: transform .2s ease-in-out;
   overscroll-behavior: contain;
-  // 사이드바 스크롤 시 뒤의 본문 스크롤 움직임 방지
 
   &.is-active {
     transform: translate3d(0, 0, 0);
@@ -23,7 +22,6 @@
 
     .logo {
       @include flexbox(start);
-      // a 타겟 영역 줄이기
 
       a {
         display: block;
@@ -43,18 +41,16 @@
   }
 
   &-user {
-    // padding: 32px 0;
+    
     a {
       @include flexbox(start);
       width: 100%;
-      // border: 1px solid red;
       @include text-style(14, $primary);
       font-weight: 700;
     }
 
     .avatar-24 {
       flex-grow: 0;
-      // 프로필 사진은 영역이 늘어나면 안되므로
       flex-shrink: 0;
       margin-right: 8px;
     }
@@ -62,13 +58,11 @@
     .username {
       @include truncate;
       flex-grow: 1;
-      // 프로필 사진을 제외하고 나머지 영역 다 차지
     }
   }
 
   &-auth {
     @include flexbox(between);
-    // padding: 24px 0;
 
     a {
       width: 84px;
@@ -107,21 +101,5 @@
     }
   }
 
-  // 스크롤바 제거
   @include no-scrollbar;
-  
-  // &::-webkit-scrollbar {
-  //   display: none;
-  // }
-
-  // 스크롤바 꾸미기
-  // &::-webkit-scrollbar {
-  //   width: 5px;
-  //   background: pink;
-  // }
-
-  // &::-webkit-scrollbar-thumb {
-  //   background-color: blue;
-  // }
-
 }

@@ -1,6 +1,3 @@
-// position absolute 말고 fixed 로도 가운데 정렬을 하고 싶을 때 대처
-// () 에 인수로 아무것도 넣지 않는다면 자동으로 absolute 가 적용되고, fixed 로 넣으면 fixed 로 적용됨
-
 @mixin pos-center-x($type: absolute) {
   @if ($type == fixed or $type == absolute) {
     position: $type;
@@ -24,8 +21,4 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
-}
-
-.modal {
-  @include pos-center(fixed);
 }

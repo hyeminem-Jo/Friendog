@@ -46,7 +46,6 @@
     box-shadow: $dropdown-shadow;
     transition: opacity .2s ease-in-out, visibility .2s ease-in-out, transform .2s ease-in-out;
     transform: translate3d(-50%, -10px, 0);
-    // @include pos-center-x; 에서 transformX(-50%) 값이 있기 때문에 0으로 해버리면 이 효과가 무시되므로 x축으로 -50% 를 꼭 넣어 유지시켜주어야 한다.
 
     &::before,
     &::after {

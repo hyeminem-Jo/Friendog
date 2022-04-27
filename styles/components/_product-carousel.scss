@@ -78,7 +78,7 @@
       }
       
       button {
-        @include flexbox; // img 가 border 에 밀려나가지 않게 아예 img 의 위치를 중앙으로 고정
+        @include flexbox; 
         width: 56px;
         height: 56px;
         opacity: 1;
@@ -88,7 +88,7 @@
 
       img {
         display: block;
-        width: 56px; // border 에 찌부되서 이미지가 작아지는 현상 해결
+        width: 56px; 
       }
     }
   }
