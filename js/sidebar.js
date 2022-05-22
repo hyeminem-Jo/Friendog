@@ -1,4 +1,5 @@
 import { $overlay } from "./common.js";
+
 const $sidebarMenuBtn = document.querySelector('.gnb-icon-button.is-menu');
 const $sidebar = document.querySelector('.sidebar')
 

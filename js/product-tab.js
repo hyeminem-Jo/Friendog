@@ -57,7 +57,6 @@ const productTabPanelList = productTabPanelIdList.map((panelId) => {
 const productTabPanelPositionMap = {}
 
 function detectTabPanelPosition() {
-  console.log(222)
   productTabPanelList.forEach(($tabPanel) => {
     const id = $tabPanel.getAttribute('id')
     const position = Math.floor(window.scrollY + $tabPanel.getBoundingClientRect().top)

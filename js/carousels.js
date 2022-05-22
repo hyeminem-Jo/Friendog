@@ -1,6 +1,6 @@
 const productCarousel = tns({
   container: '.product-carousel .slider-list',
-  mode: 'gallery',
+  // mode: 'gallery',
   controls: false, 
   navContainer: '.product-carousel .thumbnail-list', 
   navAsThumbnails: true, 
