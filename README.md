@@ -222,3 +222,6 @@ window.addEventListener('load', detectTabPanelPosition)
 window.addEventListener('resize', _.throttle(detectTabPanelPosition, 1000)) 
 window.addEventListener('scroll', _.throttle(upDateActiveTabScroll, 300) )
 ```
+
+## 프로젝트 의의
+본 프로젝트를 통해 전반적으로 실무와 관련된 지식을 쌓을 수 있었고, 그리그시스템을 사용하여 반응형웹을 구현했던 부분이 가장 인상깊었다. 또한 바닐라 자바스크립트 하드코딩이나 scss 를 통한 모듈화, mixin, 반복문 등을 통해 스타일링을 보다 효율적인 방법으로 진행하는 경험 등에 의의가 있다고 생각한다.
